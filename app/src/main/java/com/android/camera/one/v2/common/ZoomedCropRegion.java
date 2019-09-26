@@ -17,6 +17,7 @@
 package com.android.camera.one.v2.common;
 
 import android.graphics.Rect;
+import android.hardware.camera2.CameraCharacteristics;
 
 import com.google.common.base.Supplier;
 

@@ -16,6 +16,8 @@
 
 package com.android.camera.one.v2.photo;
 
+import android.hardware.camera2.CameraCharacteristics;
+
 import com.android.camera.async.MainThread;
 import com.android.camera.one.v2.commands.CameraCommandExecutor;
 import com.android.camera.one.v2.core.FrameServer;

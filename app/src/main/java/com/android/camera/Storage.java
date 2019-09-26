@@ -501,9 +501,6 @@ public class Storage {
 
         File dir = new File(DIRECTORY);
         dir.mkdirs();
-
-        Log.d(TAG, "can write " + dir.canWrite());
-
         if (!dir.isDirectory() || !dir.canWrite()) {
             return UNAVAILABLE;
         }

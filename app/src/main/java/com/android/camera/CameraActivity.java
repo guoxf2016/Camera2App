@@ -19,7 +19,6 @@ package com.android.camera;
 
 import android.Manifest;
 import android.animation.Animator;
-import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Dialog;
@@ -30,6 +29,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
@@ -158,7 +158,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.GlideBuilder;
 import com.bumptech.glide.MemoryCategory;
 import com.bumptech.glide.load.DecodeFormat;
-//import com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor;
+import com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor;
+import com.android.camera.exif.ExifInterface;
 
 import com.google.common.base.Optional;
 import com.google.common.logging.eventprotos;
@@ -193,9 +194,6 @@ public class CameraActivity extends QuickActivity
     private static final long SCREEN_DELAY_MS = 2 * 60 * 1000; // 2 mins.
     /** Load metadata for 10 items ahead of our current. */
     private static final int FILMSTRIP_PRELOAD_AHEAD_ITEMS = 10;
-    private static final int PERMISSIONS_ACTIVITY_REQUEST_CODE = 1;
-    private static final int PERMISSIONS_RESULT_CODE_OK = 1;
-    private static final int PERMISSIONS_RESULT_CODE_FAILED = 2;
 
     /** Should be used wherever a context is needed. */
     private Context mAppContext;
@@ -849,6 +847,7 @@ public class CameraActivity extends QuickActivity
                 messageId > 0 ? getString(messageId) : "");
     }
 
+    // Candidate for deletion as Android Beam is deprecated in Android Q
     private void setupNfcBeamPush() {
         NfcAdapter adapter = NfcAdapter.getDefaultAdapter(mAppContext);
         if (adapter == null) {
@@ -1434,7 +1433,7 @@ public class CameraActivity extends QuickActivity
         mOnCreateTime = System.currentTimeMillis();
         mAppContext = getApplicationContext();
         mMainHandler = new MainHandler(this, getMainLooper());
-        mLocationManager = new LocationManager(mAppContext);
+        mLocationManager = new LocationManager(mAppContext, shouldUseNoOpLocation());
         mOrientationManager = new OrientationManagerImpl(this, mMainHandler);
         mSettingsManager = getServices().getSettingsManager();
         mSoundPlayer = new SoundPlayer(mAppContext);
@@ -1448,7 +1447,7 @@ public class CameraActivity extends QuickActivity
             return;
         }
         profile.mark();
-        /*if (!Glide.isSetup()) {
+        if (!Glide.isSetup()) {
             Context context = getAndroidContext();
             Glide.setup(new GlideBuilder(context)
                 .setDecodeFormat(DecodeFormat.ALWAYS_ARGB_8888)
@@ -1459,7 +1458,7 @@ public class CameraActivity extends QuickActivity
             // As a camera we will use a large amount of memory
             // for displaying images.
             glide.setMemoryCategory(MemoryCategory.HIGH);
-        }*/
+        }
         profile.mark("Glide.setup");
 
         mActiveCameraDeviceTracker = ActiveCameraDeviceTracker.instance();
@@ -1632,6 +1631,7 @@ public class CameraActivity extends QuickActivity
 
         preloadFilmstripItems();
 
+        // Candidate for deletion as Android Beam is deprecated in Android Q
         setupNfcBeamPush();
 
         mLocalImagesObserver = new FilmstripContentObserver();
@@ -1731,6 +1731,35 @@ public class CameraActivity extends QuickActivity
         return modeIndex;
     }
 
+    /**
+     * Incase the calling package doesn't have ACCESS_FINE_LOCATION permissions, we should not pass
+     * it valid location information in exif.
+     */
+    private boolean shouldUseNoOpLocation () {
+        String callingPackage = getCallingPackage();
+        if (callingPackage == null) {
+            // Activity not started through startActivityForResult.
+            return false;
+        }
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = getPackageManager().getPackageInfo(callingPackage,
+                    PackageManager.GET_PERMISSIONS);
+        } catch (Exception e) {
+            Log.w(TAG, "Unable to get PackageInfo for callingPackage " + callingPackage);
+        }
+        if (packageInfo != null) {
+            for (int i = 0; i < packageInfo.requestedPermissions.length; i++) {
+                if (packageInfo.requestedPermissions[i].equals(
+                        Manifest.permission.ACCESS_FINE_LOCATION) &&
+                        (packageInfo.requestedPermissionsFlags[i] &
+                        PackageInfo.REQUESTED_PERMISSION_GRANTED) != 0) {
+                  return false;
+                }
+            }
+        }
+        return true;
+    }
     /**
      * Call this whenever the mode drawer or filmstrip change the visibility
      * state.
@@ -1904,10 +1933,14 @@ public class CameraActivity extends QuickActivity
         } else {
             mHasCriticalPermissions = false;
         }
-
-        if ((checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-                !mSettingsManager.getBoolean(SettingsManager.SCOPE_GLOBAL, Keys.KEY_HAS_SEEN_PERMISSIONS_DIALOGS)) ||
-                !mHasCriticalPermissions) {
+        if (!mHasCriticalPermissions || (mSettingsManager.getBoolean(
+                SettingsManager.SCOPE_GLOBAL, Keys.KEY_RECORD_LOCATION) &&
+                (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
+                   != PackageManager.PERMISSION_GRANTED) &&
+                !mSettingsManager.getBoolean(SettingsManager.SCOPE_GLOBAL,
+                    Keys.KEY_HAS_SEEN_PERMISSIONS_DIALOGS))) {
+            // TODO: Convert PermissionsActivity into a dialog so we
+            // don't lose the state of CameraActivity.
             Intent intent = new Intent(this, PermissionsActivity.class);
             startActivity(intent);
             finish();
@@ -2324,7 +2357,6 @@ public class CameraActivity extends QuickActivity
         public void onStorageUpdateDone(long bytes);
     }
 
-    @SuppressLint("StaticFieldLeak")
     protected void updateStorageSpaceAndHint(final OnStorageUpdateDoneListener callback) {
         /*
          * We execute disk operations on a background thread in order to

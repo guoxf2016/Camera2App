@@ -18,6 +18,7 @@ package com.android.camera.one;
 
 import android.graphics.ImageFormat;
 import android.graphics.Rect;
+import android.hardware.camera2.CameraCharacteristics;
 
 import com.android.camera.ui.motion.LinearScale;
 import com.android.camera.util.Size;
@@ -132,6 +133,11 @@ public interface OneCameraCharacteristics {
      * @return true if this camera supports custom AutoFocus regions.
      */
     public boolean isAutoFocusSupported();
+
+    /**
+     * @return true if this camera supports continuous picture autofocus.
+     */
+    public boolean isContinuousPictureAutoFocusSupported();
 
     /**
      * @return true if this camera supports custom AutoExposure regions.
