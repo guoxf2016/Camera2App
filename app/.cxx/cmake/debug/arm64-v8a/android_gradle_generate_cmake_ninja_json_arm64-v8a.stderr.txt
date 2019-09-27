@@ -1,0 +1,1 @@
+debug PROJECT_SOURCE_DIR  D:/github/Camera22/app

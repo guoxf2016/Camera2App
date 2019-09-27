@@ -1,0 +1,8 @@
+D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir
+D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/sub_cmake_lists/libjpegutil/CMakeFiles/edit_cache.dir
+D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/sub_cmake_lists/libjpegutil/CMakeFiles/rebuild_cache.dir
+D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/sub_cmake_lists/tinyplanet/CMakeFiles/rebuild_cache.dir
+D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/sub_cmake_lists/tinyplanet/CMakeFiles/jni_tinyplanet.dir
+D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/sub_cmake_lists/tinyplanet/CMakeFiles/edit_cache.dir

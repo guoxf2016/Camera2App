@@ -4,11 +4,11 @@ buildscript {
     
     repositories {
 //        maven { url 'http://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+//        maven { url 'https://maven.aliyun.com/repository/google' }
+//        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        google()
 
-//        google()
-//        jcenter()
+        jcenter()
 //        jcenter(){ url 'http://jcenter.bintray.com/'}
     }
     dependencies {
@@ -25,16 +25,16 @@ allprojects {
 //        maven { url 'http://maven.aliyun.com/repository/public' }
 //        maven { url 'https://maven.aliyun.com/repository/google' }
 //        maven { url 'https://maven.aliyun.com/repository/jcenter' }
-//        google()
-//        jcenter()
+        google()
+        jcenter()
 //        jcenter(){ url 'http://jcenter.bintray.com/'}
     }
 
-    gradle.projectsEvaluated {
+    /*gradle.projectsEvaluated {
         tasks.withType(JavaCompile) {
             options.compilerArgs.add('-Xbootclasspath/p:./app/sdk/android2.jar')
         }
-    }
+    }*/
 }
 
 task clean(type: Delete) {
