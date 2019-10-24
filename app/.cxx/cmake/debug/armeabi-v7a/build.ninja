@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\github\Camera22\app\.cxx\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.6.4111459\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D D:\github\Camera2App\app\.cxx\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.6.4111459\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -43,14 +43,14 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\github\Camera22\app\.cxx\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.6.4111459\bin\cmake.exe -HD:\github\Camera22\app -BD:\github\Camera22\app\.cxx\cmake\debug\armeabi-v7a"
+  COMMAND = cmd.exe /C "cd /D D:\github\Camera2App\app\.cxx\cmake\debug\armeabi-v7a && D:\sdk\cmake\3.6.4111459\bin\cmake.exe -HD:\github\Camera2App\app -BD:\github\Camera2App\app\.cxx\cmake\debug\armeabi-v7a"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/github/Camera22/app/CMakeLists.txt
+# D:/github/Camera2App/app/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -60,14 +60,14 @@ build sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir/__/__/src/main/cpp
   DEFINES = -Djni_jpegutil_EXPORTS
   DEP_FILE = sub_cmake_lists\libjpegutil\CMakeFiles\jni_jpegutil.dir\__\__\src\main\cpp\jpegutil.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = D:\github\Camera22\app\src\main\cpp\jpegutil.cpp
+  IN_ABS = D:\github\Camera2App\app\src\main\cpp\jpegutil.cpp
   OBJECT_DIR = sub_cmake_lists\libjpegutil\CMakeFiles\jni_jpegutil.dir
   OBJECT_FILE_DIR = sub_cmake_lists\libjpegutil\CMakeFiles\jni_jpegutil.dir\__\__\src\main\cpp
 build sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir/__/__/src/main/cpp/jpegutilnative.cpp.o: CXX_COMPILER__jni_jpegutil ../../../../src/main/cpp/jpegutilnative.cpp
   DEFINES = -Djni_jpegutil_EXPORTS
   DEP_FILE = sub_cmake_lists\libjpegutil\CMakeFiles\jni_jpegutil.dir\__\__\src\main\cpp\jpegutilnative.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = D:\github\Camera22\app\src\main\cpp\jpegutilnative.cpp
+  IN_ABS = D:\github\Camera2App\app\src\main\cpp\jpegutilnative.cpp
   OBJECT_DIR = sub_cmake_lists\libjpegutil\CMakeFiles\jni_jpegutil.dir
   OBJECT_FILE_DIR = sub_cmake_lists\libjpegutil\CMakeFiles\jni_jpegutil.dir\__\__\src\main\cpp
 
@@ -79,7 +79,7 @@ build sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir/__/__/src/main/cpp
 # Link the shared library sub_cmake_lists\libjpegutil\src\main\jniLibs\{ANDROID_ABI}\libjni_jpegutil.so
 
 ident0 = sub_cmake_lists/libjpegutil/src/main/jniLibs/{ANDROID_ABI}/libjni_jpegutil.so
-build $ident0: CXX_SHARED_LIBRARY_LINKER__jni_jpegutil sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir/__/__/src/main/cpp/jpegutil.cpp.o sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir/__/__/src/main/cpp/jpegutilnative.cpp.o | ../../../../libs/armeabi-v7a/libjpeg_static_ndk.a D$:/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/26/liblog.so
+build $ident0: CXX_SHARED_LIBRARY_LINKER__jni_jpegutil sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir/__/__/src/main/cpp/jpegutil.cpp.o sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir/__/__/src/main/cpp/jpegutilnative.cpp.o | ../../../../libs/armeabi-v7a/libjpeg_static_ndk.a D$:/SDK/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/26/liblog.so
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info
   LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--exclude-libs,libunwind.a -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack
   LINK_LIBRARIES = ../../../../libs/armeabi-v7a/libjpeg_static_ndk.a -llog -ldl -ljnigraphics -latomic -lm
@@ -92,7 +92,7 @@ build $ident0: CXX_SHARED_LIBRARY_LINKER__jni_jpegutil sub_cmake_lists/libjpegut
   TARGET_PDB = jni_jpegutil.so.dbg
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/github/Camera22/app/CMakeLists.txt
+# D:/github/Camera2App/app/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -102,7 +102,7 @@ build sub_cmake_lists/tinyplanet/CMakeFiles/jni_tinyplanet.dir/__/__/src/main/cp
   DEFINES = -Djni_tinyplanet_EXPORTS
   DEP_FILE = sub_cmake_lists\tinyplanet\CMakeFiles\jni_tinyplanet.dir\__\__\src\main\cpp\tinyplanet.cc.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = D:\github\Camera22\app\src\main\cpp\tinyplanet.cc
+  IN_ABS = D:\github\Camera2App\app\src\main\cpp\tinyplanet.cc
   OBJECT_DIR = sub_cmake_lists\tinyplanet\CMakeFiles\jni_tinyplanet.dir
   OBJECT_FILE_DIR = sub_cmake_lists\tinyplanet\CMakeFiles\jni_tinyplanet.dir\__\__\src\main\cpp
 
@@ -114,7 +114,7 @@ build sub_cmake_lists/tinyplanet/CMakeFiles/jni_tinyplanet.dir/__/__/src/main/cp
 # Link the shared library sub_cmake_lists\tinyplanet\src\main\jniLibs\{ANDROID_ABI}\libjni_tinyplanet.so
 
 ident1 = sub_cmake_lists/tinyplanet/src/main/jniLibs/{ANDROID_ABI}/libjni_tinyplanet.so
-build $ident1: CXX_SHARED_LIBRARY_LINKER__jni_tinyplanet sub_cmake_lists/tinyplanet/CMakeFiles/jni_tinyplanet.dir/__/__/src/main/cpp/tinyplanet.cc.o | D$:/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/26/liblog.so
+build $ident1: CXX_SHARED_LIBRARY_LINKER__jni_tinyplanet sub_cmake_lists/tinyplanet/CMakeFiles/jni_tinyplanet.dir/__/__/src/main/cpp/tinyplanet.cc.o | D$:/SDK/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/26/liblog.so
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info
   LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--exclude-libs,libunwind.a -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack
   LINK_LIBRARIES = -llog -ljnigraphics -latomic -lm
@@ -143,13 +143,13 @@ build libjni_tinyplanet.so: phony $ident5
 # =============================================================================
 
 #############################################
-# Folder: D:/github/Camera22/app/sub_cmake_lists/libjpegutil
+# Folder: D:/github/Camera2App/app/sub_cmake_lists/libjpegutil
 
 build  sub_cmake_lists/libjpegutil/all: phony jni_jpegutil
 # =============================================================================
 
 #############################################
-# Folder: D:/github/Camera22/app/sub_cmake_lists/tinyplanet
+# Folder: D:/github/Camera2App/app/sub_cmake_lists/tinyplanet
 
 build  sub_cmake_lists/tinyplanet/all: phony jni_tinyplanet
 # =============================================================================
@@ -171,13 +171,13 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../../../../CMakeLists.txt ../../../../sub_cmake_lists/libjpegutil/CMakeLists.txt ../../../../sub_cmake_lists/tinyplanet/CMakeLists.txt CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake D$:/Sdk/ndk/20.0.5594570/build/cmake/android.toolchain.cmake D$:/Sdk/ndk/20.0.5594570/build/cmake/platforms.cmake
+build build.ninja: RERUN_CMAKE | ../../../../CMakeLists.txt ../../../../sub_cmake_lists/libjpegutil/CMakeLists.txt ../../../../sub_cmake_lists/tinyplanet/CMakeLists.txt CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCCompiler.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCXXCompiler.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompileFeatures.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompiler.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompilerABI.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineSystem.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeFindBinUtils.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeParseImplicitLinkInfo.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCCompiler.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCXXCompiler.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCompilerCommon.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C-FeatureTests.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-FeatureTests.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-TestableFeatures.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Internal/FeatureTesting.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake D$:/SDK/ndk/20.0.5594570/build/cmake/android.toolchain.cmake D$:/SDK/ndk/20.0.5594570/build/cmake/platforms.cmake D$:/sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompiler.cmake.in D$:/sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompilerABI.c D$:/sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompiler.cmake.in D$:/sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp D$:/sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystem.cmake.in
   pool = console
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../../../../CMakeLists.txt ../../../../sub_cmake_lists/libjpegutil/CMakeLists.txt ../../../../sub_cmake_lists/tinyplanet/CMakeLists.txt CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake D$:/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake D$:/Sdk/ndk/20.0.5594570/build/cmake/android.toolchain.cmake D$:/Sdk/ndk/20.0.5594570/build/cmake/platforms.cmake: phony
+build ../../../../CMakeLists.txt ../../../../sub_cmake_lists/libjpegutil/CMakeLists.txt ../../../../sub_cmake_lists/tinyplanet/CMakeLists.txt CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCCompiler.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCXXCompiler.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompileFeatures.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompiler.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompilerABI.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineSystem.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeFindBinUtils.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeParseImplicitLinkInfo.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCCompiler.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCXXCompiler.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCompilerCommon.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C-FeatureTests.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-FeatureTests.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-TestableFeatures.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Internal/FeatureTesting.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake D$:/SDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake D$:/SDK/ndk/20.0.5594570/build/cmake/android.toolchain.cmake D$:/SDK/ndk/20.0.5594570/build/cmake/platforms.cmake D$:/sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompiler.cmake.in D$:/sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompilerABI.c D$:/sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompiler.cmake.in D$:/sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp D$:/sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystem.cmake.in: phony
 
 #############################################
 # Clean all the built files.

@@ -1,4 +1,4 @@
-# Install script for directory: D:/github/Camera22/app
+# Install script for directory: D:/github/Camera2App/app
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/sub_cmake_lists/libjpegutil/cmake_install.cmake")
-  include("D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/sub_cmake_lists/tinyplanet/cmake_install.cmake")
+  include("D:/github/Camera2App/app/.cxx/cmake/release/armeabi-v7a/sub_cmake_lists/libjpegutil/cmake_install.cmake")
+  include("D:/github/Camera2App/app/.cxx/cmake/release/armeabi-v7a/sub_cmake_lists/tinyplanet/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/github/Camera22/app/.cxx/cmake/release/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/github/Camera2App/app/.cxx/cmake/release/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

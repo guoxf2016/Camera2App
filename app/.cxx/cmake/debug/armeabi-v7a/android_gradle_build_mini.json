@@ -1,29 +1,29 @@
 {
   "buildFiles": [
-    "D:\\github\\Camera22\\app\\CMakeLists.txt",
-    "D:\\github\\Camera22\\app\\sub_cmake_lists\\libjpegutil\\CMakeLists.txt",
-    "D:\\github\\Camera22\\app\\sub_cmake_lists\\tinyplanet\\CMakeLists.txt"
+    "D:\\github\\Camera2App\\app\\CMakeLists.txt",
+    "D:\\github\\Camera2App\\app\\sub_cmake_lists\\libjpegutil\\CMakeLists.txt",
+    "D:\\github\\Camera2App\\app\\sub_cmake_lists\\tinyplanet\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\github\\Camera22\\app\\.cxx\\cmake\\debug\\armeabi-v7a --target clean"
+    "D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\github\\Camera2App\\app\\.cxx\\cmake\\debug\\armeabi-v7a --target clean"
   ],
   "libraries": {
     "jni_tinyplanet-Debug-armeabi-v7a": {
       "artifactName": "jni_tinyplanet",
-      "buildCommand": "D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\github\\Camera22\\app\\.cxx\\cmake\\debug\\armeabi-v7a --target jni_tinyplanet",
+      "buildCommand": "D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\github\\Camera2App\\app\\.cxx\\cmake\\debug\\armeabi-v7a --target jni_tinyplanet",
       "abi": "armeabi-v7a",
-      "output": "D:\\github\\Camera22\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\sub_cmake_lists\\tinyplanet\\src\\main\\jniLibs\\{ANDROID_ABI}\\libjni_tinyplanet.so"
+      "output": "D:\\github\\Camera2App\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\sub_cmake_lists\\tinyplanet\\src\\main\\jniLibs\\{ANDROID_ABI}\\libjni_tinyplanet.so"
     },
     "jpeg_static_ndk-Debug-armeabi-v7a": {
       "artifactName": "jpeg_static_ndk",
       "abi": "armeabi-v7a",
-      "output": "D:\\github\\Camera22\\app\\libs\\armeabi-v7a\\libjpeg_static_ndk.a"
+      "output": "D:\\github\\Camera2App\\app\\libs\\armeabi-v7a\\libjpeg_static_ndk.a"
     },
     "jni_jpegutil-Debug-armeabi-v7a": {
       "artifactName": "jni_jpegutil",
-      "buildCommand": "D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\github\\Camera22\\app\\.cxx\\cmake\\debug\\armeabi-v7a --target jni_jpegutil",
+      "buildCommand": "D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\github\\Camera2App\\app\\.cxx\\cmake\\debug\\armeabi-v7a --target jni_jpegutil",
       "abi": "armeabi-v7a",
-      "output": "D:\\github\\Camera22\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\sub_cmake_lists\\libjpegutil\\src\\main\\jniLibs\\{ANDROID_ABI}\\libjni_jpegutil.so"
+      "output": "D:\\github\\Camera2App\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\sub_cmake_lists\\libjpegutil\\src\\main\\jniLibs\\{ANDROID_ABI}\\libjni_jpegutil.so"
     }
   }
 }

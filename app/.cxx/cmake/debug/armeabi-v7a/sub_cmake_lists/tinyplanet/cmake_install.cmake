@@ -1,4 +1,4 @@
-# Install script for directory: D:/github/Camera22/app/sub_cmake_lists/tinyplanet
+# Install script for directory: D:/github/Camera2App/app/sub_cmake_lists/tinyplanet
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':android-ex-camera2-utils', ':android-ex-camera2-portability'
