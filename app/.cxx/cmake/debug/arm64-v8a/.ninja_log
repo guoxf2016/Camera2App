@@ -1,6 +1,0 @@
-# ninja log v5
-202	1245	0	sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir/__/__/src/main/cpp/jpegutilnative.cpp.o	6d8d17439ab1ac17
-1	1430	0	sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir/__/__/src/main/cpp/jpegutil.cpp.o	942fff17f3470519
-1430	2201	0	sub_cmake_lists/libjpegutil/src/main/jniLibs/{ANDROID_ABI}/libjni_jpegutil.so	7ada6b5b454c0d8d
-1	533	0	sub_cmake_lists/tinyplanet/CMakeFiles/jni_tinyplanet.dir/__/__/src/main/cpp/tinyplanet.cc.o	2cd62484ebb79c9b
-533	815	0	sub_cmake_lists/tinyplanet/src/main/jniLibs/{ANDROID_ABI}/libjni_tinyplanet.so	fa158ac2a9007562

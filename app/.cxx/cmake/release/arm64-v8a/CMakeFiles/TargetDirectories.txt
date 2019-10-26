@@ -1,8 +1,0 @@
-D:/github/Camera2App/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/edit_cache.dir
-D:/github/Camera2App/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/rebuild_cache.dir
-D:/github/Camera2App/app/.cxx/cmake/release/arm64-v8a/sub_cmake_lists/libjpegutil/CMakeFiles/jni_jpegutil.dir
-D:/github/Camera2App/app/.cxx/cmake/release/arm64-v8a/sub_cmake_lists/libjpegutil/CMakeFiles/edit_cache.dir
-D:/github/Camera2App/app/.cxx/cmake/release/arm64-v8a/sub_cmake_lists/libjpegutil/CMakeFiles/rebuild_cache.dir
-D:/github/Camera2App/app/.cxx/cmake/release/arm64-v8a/sub_cmake_lists/tinyplanet/CMakeFiles/rebuild_cache.dir
-D:/github/Camera2App/app/.cxx/cmake/release/arm64-v8a/sub_cmake_lists/tinyplanet/CMakeFiles/jni_tinyplanet.dir
-D:/github/Camera2App/app/.cxx/cmake/release/arm64-v8a/sub_cmake_lists/tinyplanet/CMakeFiles/edit_cache.dir

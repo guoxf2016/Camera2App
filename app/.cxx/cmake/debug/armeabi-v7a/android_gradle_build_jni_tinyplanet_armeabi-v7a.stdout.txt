@@ -1,2 +1,0 @@
-[1/2] Building CXX object sub_cmake_lists/tinyplanet/CMakeFiles/jni_tinyplanet.dir/__/__/src/main/cpp/tinyplanet.cc.o
-[2/2] Linking CXX shared library sub_cmake_lists\tinyplanet\src\main\jniLibs\{ANDROID_ABI}\libjni_tinyplanet.so
